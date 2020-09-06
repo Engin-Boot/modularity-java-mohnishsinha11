@@ -2,7 +2,7 @@ package com.philips.constants;
 
 //import colorcoder.Main.MinorColor;
 
-public enum MinorColor {
+public enum MinorColor implements ColorIndex{
 	BLUE(0),
     ORANGE(1),
     GREEN(2),
@@ -12,15 +12,16 @@ public enum MinorColor {
     private MinorColor(int index) {
         this.index = index;
     }
+    @Override
     public int getIndex() {
         return index;
     }
-    public static MinorColor fromIndex(int index) {
-        for(MinorColor color: MinorColor.values()) {
-            if(color.getIndex() == index) {
-                return color;
-            }
-        }
-        return null;
-    }
+//    public static MinorColor fromIndex(int index) {
+//        for(MinorColor color: MinorColor.values()) {
+//            if(color.getIndex() == index) {
+//                return color;
+//            }
+//        }
+//        return null;
+//    }
 }
